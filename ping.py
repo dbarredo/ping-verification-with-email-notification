@@ -6,10 +6,10 @@ import time
 import smtplib
 
 
-sender = input('Sender Email : ')
-password = input('password : ')
-reciever = input('Receiver Email : ')
-target_IP = input("Enter IP Address")
+sender = input('Sender Email: ')
+password = input('password: ')
+reciever = input('Receiver Email: ')
+target_IP = input("Enter IP Address: ")
 
 
 server_list = f"{target_IP}"
