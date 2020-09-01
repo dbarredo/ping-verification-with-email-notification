@@ -5,12 +5,20 @@ import schedule
 import time
 import smtplib
 
+
+sender = input('Sender_email : ')
+password = input('password : ')
+reciever = input('Receiver Email : ')
+
+
+
 server_list = ['10.111.0.171','10.111.0.163','10.111.0.156','10.111.0.168','10.111.0.151','10.111.0.153']
 
 
-sender_email = "zdnbarredo@globe.com.ph"
-password =  "veiiepemtgqdmrnc"
-rec_email = "dsgncit@globe.com.ph"
+
+sender_email = f"{sender}"
+password =  f"{password}"
+rec_email = f"{reciever}"
 
 
 
