@@ -6,18 +6,18 @@ import time
 import smtplib
 
 
-sender = input('Sender_email : ')
+sender = input('Sender Email : ')
 password = input('password : ')
 reciever = input('Receiver Email : ')
+target_IP = input("Enter IP Address")
 
 
-
-server_list = ['10.111.0.171','10.111.0.163','10.111.0.156','10.111.0.168','10.111.0.151','10.111.0.153']
+server_list = f"{target_IP}"
 
 
 
 sender_email = f"{sender}"
-password =  f"{password}"
+password =  f"{password}" #create apppassword "https://myaccount.google.com/apppasswords"
 rec_email = f"{reciever}"
 
 
@@ -37,7 +37,7 @@ def repeat():
              server.starttls()
              server.ehlo()
              server.login(sender_email, password)
-             subject = f"[KEA SERVER UNREACHABLE] : IP {ip}"
+             subject = f"[IP UNREACHABLE] : IP {ip}"
              body = f"Ping Status Monitor Unreachable for IP : {ip} "
              message = f"Subject: {subject}\n\n{body}"
              server.sendmail(sender_email, rec_email, message)
